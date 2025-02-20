@@ -1,0 +1,18 @@
+<svg 
+  width="436" 
+  height="639" 
+  viewBox="0 0 436 639" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g opacity="0.1">
+    <path 
+      d="M175.79 0H43.7986L219.142 269.318L0 651H135.418L351.432 270.507" 
+      fill="#CCC5B8"
+    />
+    <path 
+      d="M509.344 651H641.279L466.01 381.682L685.059 0H549.699L333.628 380.642" 
+      fill="#CCC5B8"
+    />
+  </g>
+</svg>

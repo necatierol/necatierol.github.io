@@ -4,16 +4,17 @@
 }
 
 body {
-  font-family: 'Jost';
-  width: 800px;
+  width: 80%;
   padding: 30px;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Josefin Sans';
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 h1 {
   font-size: 3em;
-  margin-bottom: 15px;
 }
 
 h2 {
@@ -37,6 +38,43 @@ li {
 li>p,
 .bio>p {
   padding: 15px;
+}
+
+.subtitle{
+  padding: 0;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+}
+
+.profile-info {
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+  padding: 0 40px;
+}
+
+.social-media {
+  padding: 0;
+}
+
+.social-media>a{
+  padding: 15px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.x-icon {
+  width: 40%;
+  height: 40%;
+  opacity: 0.04;
+  background-image: url('./onx-blackx.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 
 .container {
