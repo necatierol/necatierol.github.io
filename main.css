@@ -1,28 +1,61 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  width: 80%;
+  max-width: 800px;
   padding: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Josefin Sans';
+  margin: 0 auto;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   line-height: 1.5;
+  font-size: 16px;
+  position: relative;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 56px;
+  font-weight: bold;
 }
 
 h2 {
+  font-size: 32px;
+  font-weight: bold;
   margin: 15px 0;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 3ch;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 img {
   border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.profile-photo {
+  max-width: 200px;
+  width: 100%;
 }
 
 ul,
@@ -40,34 +73,42 @@ li>p,
   padding: 15px;
 }
 
-.subtitle{
+.subtitle {
   padding: 0;
   margin-bottom: 25px;
-  font-size: 1.4rem;
+  font-size: 22px;
 }
 
-.profile-info {
-  display: inline-block;
-  width: 70%;
-  vertical-align: top;
-  padding: 0 40px;
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.social-media {
+.header-left {
+  flex: 1;
+}
+
+.header-right {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.social-media-links {
   padding: 0;
 }
 
-.social-media>a{
-  padding: 15px;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+.social-media-links a {
+  padding: 10px;
+  margin-right: 5px;
 }
 
 .x-icon {
-  width: 40%;
-  height: 40%;
+  width: 380px;
+  height: 350px;
+  max-width: 100%;
+  max-height: 100%;
   opacity: 0.04;
   background-image: url('./onx-blackx.svg');
   background-repeat: no-repeat;
@@ -75,6 +116,7 @@ li>p,
   position: fixed;
   right: 0;
   bottom: 0;
+  margin-right: calc((100vw - 800px) / 2);
 }
 
 .container {
@@ -89,8 +131,33 @@ li>p,
   display: inline-block;
 }
 
-.footer {
+footer {
   margin-top: 30px;
   padding-top: 10px;
-  border-top: 1px solid;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-right {
+    padding-left: 0;
+  }
+
+  .social-media-links a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .x-icon {
+    margin-right: 0;
+  }
 }
