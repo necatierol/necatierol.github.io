@@ -117,6 +117,7 @@ li>p,
   right: 0;
   bottom: 0;
   margin-right: calc((100vw - 800px) / 2);
+  z-index: -1;
 }
 
 .container {
