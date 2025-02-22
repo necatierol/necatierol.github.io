@@ -110,7 +110,7 @@ li>p,
   max-width: 100%;
   max-height: 100%;
   opacity: 0.04;
-  background-image: url('./onx-blackx.svg');
+  background-image: url('img/onx-blackx.svg');
   background-repeat: no-repeat;
   background-size: contain;
   position: fixed;
@@ -136,6 +136,11 @@ footer {
   margin-top: 30px;
   padding-top: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer-right {
+  float: right;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
