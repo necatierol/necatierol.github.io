@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grana Studio | Venture Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #263238;
+      --accent: #A6212B;
+      --light: #FFFFFF;
+      --gray-100: #F5F5F5;
+      --gray-200: #EEEEEE;
+      --gray-300: #E0E0E0;
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space-md: 24px;
+      --space-lg: 48px;
+      --space-xl: 80px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--primary);
+      background-color: var(--light);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-md) 0;
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-links a {
+      margin-left: var(--space-md);
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    
+    .hero {
+      padding: var(--space-xl) 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-md);
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 800px;
+    }
+    
+    .subtitle {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #4A4A4A;
+      max-width: 600px;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+    
+    .btn {
+      padding: var(--space-sm) var(--space-md);
+      border-radius: 4px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #8A1B23;
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary);
+      border: 1px solid var(--gray-300);
+    }
+    
+    .btn-secondary:hover {
+      background-color: var(--gray-100);
+    }
+    
+    .section {
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+    }
+    
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+    
+    .service-item {
+      padding: var(--space-md);
+      background-color: var(--gray-100);
+      border-radius: 4px;
+    }
+    
+    .service-item h3 {
+      margin-bottom: var(--space-xs);
+      font-weight: 600;
+    }
+    
+    footer {
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .social a {
+      margin-left: var(--space-sm);
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .services {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+      }
+      
+      .social {
+        margin-top: var(--space-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="#" class="logo">GRANA</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    
+    <div class="hero">
+      <h1>We co-build digital products from seed to scale.</h1>
+      <p class="subtitle">With design, engineering and strategy, Grana transforms raw ideas into valuable startups — in exchange for equity and shared vision.</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Let's Build Together</a>
+        <a href="#work" class="btn btn-secondary">Explore Our Work</a>
+      </div>
+    </div>
+  </div>
+  
+  <section class="section" id="about">
+    <div class="container">
+      <h2>We're not an agency. We're your co-founder.</h2>
+      <p>We partner with entrepreneurs, creators, and companies to co-build high-impact digital products. From design to devops, our studio handles the full stack — with skin in the game.</p>
+    </div>
+  </section>
+  
+  <section class="section" id="services">
+    <div class="container">
+      <h2>Everything you need to go from 0 to 1 — and beyond.</h2>
+      <div class="services">
+        <div class="service-item">
+          <h3>Product & Brand Strategy</h3>
+          <p>We help define your vision, market fit, and growth strategy.</p>
+        </div>
+        <div class="service-item">
+          <h3>UX/UI & Visual Design</h3>
+          <p>Beautiful, intuitive experiences that connect with users.</p>
+        </div>
+        <div class="service-item">
+          <h3>Full-stack Development</h3>
+          <p>Robust, scalable solutions built with modern technologies.</p>
+        </div>
+        <div class="service-item">
+          <h3>DevOps & Deployment</h3>
+          <p>Smooth, reliable infrastructure that grows with you.</p>
+        </div>
+        <div class="service-item">
+          <h3>MVP Launches</h3>
+          <p>Get to market quickly with focused, valuable products.</p>
+        </div>
+        <div class="service-item">
+          <h3>Team Extension</h3>
+          <p>Augment your capabilities with our specialized expertise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section" id="process">
+    <div class="container">
+      <h2>Equity-based. Founder-mindset. Long-term vision.</h2>
+      <p>We don't just build and disappear. We grow with you. Grana's model is based on shared success and scalable partnerships.</p>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <h2>Introducing: GRANIVA</h2>
+      <p>Our product support & acceleration platform — powered by Grana.</p>
+      <a href="#" class="btn btn-secondary" style="margin-top: var(--space-sm); display: inline-block;">Discover Graniva →</a>
+    </div>
+  </section>
+  
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <p>Contact: <a href="mailto:info@grana.studio">info@grana.studio</a></p>
+        </div>
+        <div class="social">
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">Medium</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
