@@ -151,6 +151,50 @@
       font-weight: 600;
     }
     
+    .form-container {
+      margin-top: var(--space-md);
+      max-width: 600px;
+    }
+    
+    .form-group {
+      margin-bottom: var(--space-md);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: var(--space-xs);
+      font-weight: 500;
+    }
+    
+    input, textarea, select {
+      width: 100%;
+      padding: var(--space-sm);
+      border: 1px solid var(--gray-300);
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+    }
+    
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .submit-btn:hover {
+      background-color: #8A1B23;
+    }
+    
     footer {
       padding: var(--space-lg) 0;
       border-top: 1px solid var(--gray-200);
@@ -192,7 +236,9 @@
 <body>
   <div class="container">
     <nav>
-      <a href="#" class="logo">GRANA</a>
+      <a href="#" class="logo">
+        <img src="./logo.svg" alt="Grana Logo" height="48">
+      </a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -257,15 +303,59 @@
     </div>
   </section>
   
-  <section class="section">
+  <section class="section" id="contact">
     <div class="container">
-      <h2>Introducing: GRANIVA</h2>
-      <p>Our product support & acceleration platform — powered by Grana.</p>
-      <a href="#" class="btn btn-secondary" style="margin-top: var(--space-sm); display: inline-block;">Discover Graniva →</a>
+      <h2>Apply to Work With Us</h2>
+      <p>Tell us about your project idea, and let's explore how we can co-build your vision.</p>
+      
+      <div class="form-container">
+        <form id="application-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="project-type">Project Type</label>
+            <select id="project-type" name="project-type" required>
+              <option value="">-- Select Project Type --</option>
+              <option value="new-startup">New Startup</option>
+              <option value="existing-business">Existing Business</option>
+              <option value="mvp">MVP Development</option>
+              <option value="product-enhancement">Product Enhancement</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="description">Tell Us About Your Project</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="budget">Estimated Budget</label>
+            <select id="budget" name="budget">
+              <option value="">-- Select Budget Range --</option>
+              <option value="under-50k">Under $50K</option>
+              <option value="50k-100k">$50K - $100K</option>
+              <option value="100k-250k">$100K - $250K</option>
+              <option value="250k+">$250K+</option>
+              <option value="equity-only">Equity Only</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+      </div>
     </div>
   </section>
   
-  <footer id="contact">
+  <footer>
     <div class="container">
       <div class="footer-content">
         <div>
